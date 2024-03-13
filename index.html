@@ -55,4 +55,36 @@
 			</div>
 		</div>
 	</body>
+
+	<script type="text/javascript">
+		//test 2222
+		window.onload = function () {
+			Formio.createForm(
+				document.getElementById("formio"),
+				"https://devformioapi.hema-quebec.qc.ca/api-dev/laitmaternel",
+				{
+					language: "fr",
+				}
+			).then(function (form) {
+				// var languages = {};
+				// window.setLanguage = function (lang) {
+				// 	// if (languages[lang]) {
+				// 	// 	return (form.language = lang);
+				// 	// }
+				// 	Formio.fetch(
+				// 		"https://devformioapi.hema-quebec.qc.ca/api-dev/langagelaitmaternel/submission?data.language=" +
+				// 			lang
+				// 	)
+				// 		.then(function (resp) {
+				// 			return resp.json();
+				// 		})
+				// 		.then(function (result) {
+				// 			languages[lang] = true;
+				// 			form.addLanguage(lang, result[0]?.data.translations);
+				// 			form.language = lang;
+				// 		});
+				// };
+			});
+		};
+	</script>
 </html>
